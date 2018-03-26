@@ -5,7 +5,7 @@ csv_file=open("data.csv", "r")
 reader = csv.reader(csv_file)
 
 for row in reader:
-    print(row[Title])
+    print(row["Title"])
 
 def handler(event, context):
     data = {
