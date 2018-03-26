@@ -1,6 +1,11 @@
 import json
 import datetime
+import csv
+csv_file=open("data.csv", "r")
+reader = csv.reader(csv_file)
 
+for row in reader:
+    print(row)
 
 def handler(event, context):
     data = {
@@ -10,3 +15,4 @@ def handler(event, context):
     return {'statusCode': 200,
             'body': json.dumps(data),
             'headers': {'Content-Type': 'application/json'}}
+
